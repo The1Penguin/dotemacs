@@ -140,7 +140,7 @@
     (add-to-list 'lsp-language-id-configuration '(odin-mode . "odin"))
     (lsp-register-client
       (make-lsp-client
-        :new-connection (lsp-stdio-connection "/home/pingu/.local/bin/ols")
+        :new-connection (lsp-stdio-connection "~/.local/bin/ols")
         :major-modes '(odin-mode)
         :server-id 'ols
         :multi-root t))))
