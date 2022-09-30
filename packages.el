@@ -15,7 +15,14 @@
 (package! haskell-mode)
 (package! lsp-haskell)
 (package! insert-kaomoji)
+(package! svelte-mode)
 (package! mu4e-alert :disable t)
+(package! docker-compose-mode)
+(package! odin-mode
+          :recipe (:host github :repo "mattt-b/odin-mode"))
+(package! flycheck-odin
+          :recipe (:host github :repo "mattt-b/flycheck-odin"))
+(package! lsp-pyright)
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:

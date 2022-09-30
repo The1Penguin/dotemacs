@@ -100,6 +100,7 @@
 
 (display-time-mode 1)
 (display-battery-mode 1)
+(setq doom-modeline-time-icon nil)
 
 (setq haskell-stylish-on-save t)
 
@@ -110,27 +111,36 @@
 (setq fancy-splash-image "~/.doom.d/splash.png")
 
 (global-visual-line-mode t)
-(require 'smtpmail)
-(require 'mu4e)
-(setq mu4e-compose-format-flowed t)
-(setq mu4e-get-mail-command "mbsync -c ~/.config/mu4e/mbsyncrc -a"
-mu4e-update-interval  300
-message-send-mail-function 'smtpmail-send-it
-starttls-use-gnutls t
-mu4e-sent-folder "/Sent"
-mu4e-drafts-folder "/Drafts"
-mu4e-trash-folder "/Trash"
-mu4e-refile-folder "/All Mail"
-)
 
-(setq mu4e-contexts
-(list
+(after! mu4e
+        (require 'smtpmail)
+        (setq mu4e-compose-format-flowed t)
+        (setq mu4e-get-mail-command "mbsync -c ~/.config/mu4e/mbsyncrc -a"
+        mu4e-update-interval  300
+        message-send-mail-function 'smtpmail-send-it
+        starttls-use-gnutls t
+        mu4e-sent-folder "/Sent"
+        mu4e-drafts-folder "/Drafts"
+        mu4e-trash-folder "/Trash"
+        mu4e-refile-folder "/All Mail"
+        )
 
-        ))
-;; use 'fancy' non-ascii characters in various places in mu4e
-(setq mu4e-use-fancy-chars t)
+        ;; use 'fancy' non-ascii characters in various places in mu4e
+        (setq mu4e-use-fancy-chars t)
 
-;; attempt to show images when viewing messages
-(setq mu4e-view-show-images t)
+        ;; attempt to show images when viewing messages
+        (setq mu4e-view-show-images t)
 
-(setq mu4e-html2text-command 'mu4e-shr2text)
+        (setq mu4e-html2text-command 'mu4e-shr2text))
+
+(use-package! odin-mode
+  :hook ((odin-mode . lsp-deferred))
+  :config
+  (after! lsp-mode
+    (add-to-list 'lsp-language-id-configuration '(odin-mode . "odin"))
+    (lsp-register-client
+      (make-lsp-client
+        :new-connection (lsp-stdio-connection "/home/pingu/.local/bin/ols")
+        :major-modes '(odin-mode)
+        :server-id 'ols
+        :multi-root t))))
