@@ -73,13 +73,7 @@
       (setq default-frame-alist
             '(
               (width . 106)
-              (height . 60)
-              )
-             )
-            )
-        )
-    )
-)
+              (height . 60)))))))
 
 
 (after! PACKAGE
@@ -96,42 +90,29 @@
   scroll-step 1
   scroll-conservatively 10000
   scroll-preserve-screen-position 1
-  doom-modeline-icon t)
+  doom-modeline-icon t
+  doom-modeline-time-icon nil
+  evil-want-fine-undo t)
+  ;evil-respect-visual-line-mode t)
 
 (display-time-mode 1)
-(display-battery-mode 1)
-(setq doom-modeline-time-icon nil)
-
+;(display-battery-mode 1)
+(add-hook 'after-init-hook #'fancy-battery-mode)
+(setq fancy-battery-show-percentage t)
 (setq haskell-stylish-on-save t)
 
 (use-package pdf-view
   :hook (pdf-tools-enabled . pdf-view-midnight-minor-mode)
   :hook (pdf-tools-enabled . hide-mode-line-mode))
 
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-loaded)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
+(add-hook! '+doom-dashboard-functions :append)
+(setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil))
 (setq fancy-splash-image "~/.doom.d/splash.png")
 
 (global-visual-line-mode t)
-
-(after! mu4e
-        (require 'smtpmail)
-        (setq mu4e-compose-format-flowed t)
-        (setq mu4e-get-mail-command "mbsync -c ~/.config/mu4e/mbsyncrc -a"
-        mu4e-update-interval  300
-        message-send-mail-function 'smtpmail-send-it
-        starttls-use-gnutls t
-        mu4e-sent-folder "/Sent"
-        mu4e-drafts-folder "/Drafts"
-        mu4e-trash-folder "/Trash"
-        mu4e-refile-folder "/All Mail"
-        )
-
-        ;; use 'fancy' non-ascii characters in various places in mu4e
-        (setq mu4e-use-fancy-chars t)
-
-        ;; attempt to show images when viewing messages
-        (setq mu4e-view-show-images t)
-
-        (setq mu4e-html2text-command 'mu4e-shr2text))
 
 (use-package! odin-mode
   :hook ((odin-mode . lsp-deferred))
@@ -144,3 +125,37 @@
         :major-modes '(odin-mode)
         :server-id 'ols
         :multi-root t))))
+
+(defun evil-normal-visual-motion (key command)
+  (define-key evil-normal-state-map key command)
+  (define-key evil-visual-state-map key command)
+  (define-key evil-motion-state-map key command))
+
+(evil-normal-visual-motion (kbd "j") 'evil-next-visual-line)
+(evil-normal-visual-motion (kbd "k") 'evil-previous-visual-line)
+
+;(require 'exwm)
+;(require 'exwm-config)
+;(exwm-config-default)
+;(require 'exwm-systemtray)
+;(exwm-systemtray-enable)
+;
+;(setq exwm-input-global-keys `(,(kbd "s-d") .
+                               ;(lambda (command)
+                                 ;(interactive (list (read-shell-command "$ ")))
+                                 ;(start-process-shell-command command nil command))))
+;(defun firefox ()
+  ;(interactive)
+  ;(let ((buff (--filter (string= "Firefox" (buffer-name it))
+                        ;(buffer-list))))
+    ;(if buff
+        ;(apply 'switch-to-buffer buff)
+      ;(call-process "firefox" nil 0 nil))))
+
+(require 'agda-input)
+(add-hook 'evil-insert-state-entry-hook (lambda ()
+                      (if (not (or (eq major-mode 'latex-mode)
+                                   (eq major-mode 'org-mode)
+                                   (eq major-mode 'vterm-mode)))
+                          (set-input-method "Agda"))))
+(add-hook 'evil-insert-state-exit-hook  (lambda () (set-input-method nil)))
