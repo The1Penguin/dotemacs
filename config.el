@@ -99,8 +99,8 @@
 ;(display-battery-mode 1)
 
 (when (string= (system-name) "scorpia")
-  ((add-hook 'after-init-hook #'fancy-battery-mode))
-   (setq fancy-battery-show-percentage t))
+  (add-hook 'after-init-hook #'fancy-battery-mode)
+  (setq fancy-battery-show-percentage t))
 
 (setq haskell-stylish-on-save t)
 
