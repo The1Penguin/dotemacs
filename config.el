@@ -97,8 +97,11 @@
 
 (display-time-mode 1)
 ;(display-battery-mode 1)
-(add-hook 'after-init-hook #'fancy-battery-mode)
-(setq fancy-battery-show-percentage t)
+
+(when (string= (system-name) "scorpia")
+  ((add-hook 'after-init-hook #'fancy-battery-mode))
+   (setq fancy-battery-show-percentage t))
+
 (setq haskell-stylish-on-save t)
 
 (use-package pdf-view
