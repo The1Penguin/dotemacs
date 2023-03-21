@@ -27,9 +27,9 @@
  '(haskell-process-args-ghci '("ghci"))
  '(haskell-process-args-stack-ghci '("--ghci-options=-ferror-spans"))
  '(haskell-process-path-ghci "stack")
- '(haskell-stylish-on-save t)
+ '(haskell-stylish-on-save t t)
  '(ignored-local-variable-values '((haskell-process-type . stack-ghci)))
- '(image-animate-loop t t)
+ '(image-animate-loop t)
  '(image-converter 'imagemagick)
  '(image-file-name-extensions
    '("png" "jpeg" "jpg" "gif" "ora" "tiff" "tif" "xbm" "xpm" "pbm" "pgm" "ppm" "pnm" "svg"))
@@ -37,8 +37,9 @@
  '(image-use-external-converter t)
  '(imagemagick-enabled-types
    '(3FR ARW AVS BMP BMP2 BMP3 CAL CALS CMYK CMYKA CR2 CRW CUR CUT DCM DCR DCX DDS DJVU DNG DPX EXR FAX FITS GBR GIF GIF87 GRB HRZ ICB ICO ICON J2C JNG JP2 JPC JPEG JPG JPX K25 KDC MIFF MNG MRW MSL MSVG MTV NEF ORA ORF OTB PBM PCD PCDS PCL PCT PCX PDB PEF PGM PICT PIX PJPEG PNG PNG24 PNG32 PNG8 PNM PPM PSD PTIF PWP RAF RAS RBG RGB RGBA RGBO RLA RLE SCR SCT SFW SGI SR2 SRF SUN SVG SVGZ TGA TIFF TIFF64 TILE TIM TTF UYVY VDA VICAR VID VIFF VST WBMP WPG X3F XBM XC XCF XPM XV XWD YCbCr YCbCrA YUV))
- '(lsp-enable-on-type-formatting t)
+ '(lsp-enable-on-type-formatting t t)
  '(lsp-haskell-formatting-provider "stylish-haskell")
+ '(midnight-mode nil)
  '(org-agenda-files '("~/testing.org"))
  '(org-display-remote-inline-images 'download)
  '(org-export-backends '(html latex md odt))
@@ -63,6 +64,7 @@
  '(org-latex-prefer-user-labels t t)
  '(package-selected-packages
    '(nix-mode hcl-mode matlab-mode emms minesweeper lsp-pyright bluetooth telega docker-compose-mode dockerfile-mode svelte-mode srefactor elisp-format clang-format mpv dracula-theme mu4e-overview mu4e-views wordel dante vhdl-tools flycheck-haskell lsp-haskell pdf-tools sublimity lsp-java tree-sitter-langs tree-sitter fira-code-mode ##))
+ '(pdf-view-midnight-invert nil)
  '(recentf-filename-handlers '(substring-no-properties doom--recentf-file-truename-fn))
  '(remote-file-name-inhibit-cache 60)
  '(safe-local-variable-values '((dante-methods new-build)))
