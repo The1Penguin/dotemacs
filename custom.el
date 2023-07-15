@@ -69,7 +69,6 @@
  '(recentf-filename-handlers '(substring-no-properties doom--recentf-file-truename-fn))
  '(remote-file-name-inhibit-cache 60)
  '(safe-local-variable-values '((dante-methods new-build)))
- '(shell-file-name "/usr/bin/fish")
  '(warning-suppress-types
    '((after-save-hook)
      (after-save-hook)
