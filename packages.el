@@ -17,10 +17,6 @@
 (package! svelte-mode)
 (package! mu4e-alert :disable t)
 (package! docker-compose-mode)
-(package! odin-mode
-          :recipe (:host github :repo "mattt-b/odin-mode"))
-(package! flycheck-odin
-          :recipe (:host github :repo "mattt-b/flycheck-odin"))
 (package! lsp-pyright)
 (package! matlab-mode)
 (package! hcl-mode)

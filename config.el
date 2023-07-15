@@ -59,7 +59,7 @@
 
 (map! ("M-i" 'vterm))
 
-(setq vterm-shell 'fish)
+(setq vterm-shell "/usr/bin/env fish")
 
 (evil-snipe-mode +1)
 (evil-snipe-override-mode +1)
@@ -116,18 +116,6 @@
 (setq fancy-splash-image "~/.doom.d/splash.png")
 
 (global-visual-line-mode t)
-
-(use-package! odin-mode
-  :hook ((odin-mode . lsp-deferred))
-  :config
-  (after! lsp-mode
-    (add-to-list 'lsp-language-id-configuration '(odin-mode . "odin"))
-    (lsp-register-client
-      (make-lsp-client
-        :new-connection (lsp-stdio-connection "~/.local/bin/ols")
-        :major-modes '(odin-mode)
-        :server-id 'ols
-        :multi-root t))))
 
 (defun evil-normal-visual-motion (key command)
   (define-key evil-normal-state-map key command)
