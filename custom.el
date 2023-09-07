@@ -64,7 +64,9 @@
  '(pdf-view-midnight-invert nil)
  '(recentf-filename-handlers '(substring-no-properties doom--recentf-file-truename-fn))
  '(remote-file-name-inhibit-cache 60)
- '(safe-local-variable-values '((dante-methods new-build)))
+ '(safe-local-variable-values
+   '((eval setq haskell-process-path-ghci "cabal run -- clashi")
+     (dante-methods new-build)))
  '(warning-suppress-types
    '((after-save-hook)
      (after-save-hook)
