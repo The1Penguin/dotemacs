@@ -24,7 +24,7 @@
  '(find-file-visit-truename t)
  '(haskell-interactive-popup-errors nil)
  '(haskell-interactive-prompt "λ ")
- '(haskell-stylish-on-save t)
+ '(haskell-stylish-on-save nil)
  '(image-animate-loop t t)
  '(image-converter 'imagemagick)
  '(image-file-name-extensions
