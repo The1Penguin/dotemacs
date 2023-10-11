@@ -15,12 +15,8 @@
 (package! haskell-mode)
 (package! insert-kaomoji)
 (package! svelte-mode)
-(package! mu4e-alert :disable t)
 (package! docker-compose-mode)
-(package! lsp-pyright)
-(package! matlab-mode)
 (package! hcl-mode)
-(package! exwm)
 (package! fancy-battery)
 
 ;; To install a package directly from a remote git repo, you must specify a
