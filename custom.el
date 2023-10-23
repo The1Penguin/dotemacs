@@ -62,6 +62,7 @@
  '(package-selected-packages
    '(nix-mode hcl-mode matlab-mode emms minesweeper lsp-pyright bluetooth telega docker-compose-mode dockerfile-mode svelte-mode srefactor elisp-format clang-format mpv dracula-theme mu4e-overview mu4e-views wordel dante vhdl-tools flycheck-haskell lsp-haskell pdf-tools sublimity lsp-java tree-sitter-langs tree-sitter fira-code-mode ##))
  '(pdf-view-midnight-invert nil)
+ '(pdf-view-midnight-colors '("#4c4f69" . "#eff1f5"))
  '(recentf-filename-handlers '(substring-no-properties doom--recentf-file-truename-fn))
  '(remote-file-name-inhibit-cache 60)
  '(safe-local-variable-values
