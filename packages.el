@@ -20,6 +20,10 @@
 (package! fancy-battery)
 (package! catppuccin-theme)
 (package! bnfc)
+(package! gleam-ts-mode
+  :recipe (:host github
+           :repo "gleam-lang/gleam-mode"
+           :branch "gleam-ts-mode"))
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
