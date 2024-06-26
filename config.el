@@ -2,9 +2,9 @@
 (setq user-full-name "Nor Führ"
       user-mail-address "nor@acorneroftheweb.com")
 
-(setq doom-font (font-spec :family "Fira Code" :size 16)
-      doom-big-font (font-spec :family "Fira Code" :size 36)
-      doom-variable-pitch-font (font-spec :family "Fira Code" :size 20))
+(setq doom-font (font-spec :family "DokiDokiMono Nerd Font" :size 20)
+      doom-big-font (font-spec :family "DokiDokiMono Nerd Font" :size 40)
+      doom-variable-pitch-font (font-spec :family "DokiDokiMono Nerd Font" :size 26))
 
 ;; (setq doom-theme 'doom-one-light)
 (setq doom-theme 'catppuccin)
