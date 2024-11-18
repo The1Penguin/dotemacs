@@ -9,13 +9,8 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
                                         ;(package! some-package)
 (package! evil-snipe)
-(package! treemacs-evil)
-(package! tree-sitter)
-(package! tree-sitter-langs)
-(package! haskell-mode)
 (package! insert-kaomoji)
 (package! svelte-mode)
-(package! docker-compose-mode)
 (package! hcl-mode)
 (package! fancy-battery)
 (package! catppuccin-theme)
