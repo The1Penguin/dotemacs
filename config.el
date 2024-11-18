@@ -87,3 +87,8 @@
                                                        (eq major-mode 'vterm-mode)))
                                               (set-input-method "Agda"))))
 (add-hook 'evil-insert-state-exit-hook  (lambda () (set-input-method nil)))
+
+(use-package! lsp-bridge
+  :config
+  (setq lsp-bridge-enable-log nil)
+  (global-lsp-bridge-mode))
