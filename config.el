@@ -33,11 +33,8 @@
                       (height . 60)))))))
 
 
-(after! PACKAGE
-  (set-ligatures! 'MAJOR-MODE
-    :symbol "keyword"))
-
 (use-package! tree-sitter
+  :defer t
   :config
   (require 'tree-sitter-langs)
   (global-tree-sitter-mode)
@@ -89,6 +86,9 @@
 (add-hook 'evil-insert-state-exit-hook  (lambda () (set-input-method nil)))
 
 (use-package! lsp-bridge
+  :defer t
   :config
   (setq lsp-bridge-enable-log nil)
   (global-lsp-bridge-mode))
+
+(setq company-idle-delay nil)
