@@ -92,6 +92,3 @@
   (global-lsp-bridge-mode))
 
 (setq company-idle-delay nil)
-
-(setq org-modern-label-border nil)
-(global-org-modern-mode)
