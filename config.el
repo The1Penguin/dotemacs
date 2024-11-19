@@ -32,14 +32,6 @@
                       (width . 106)
                       (height . 60)))))))
 
-
-(use-package! tree-sitter
-  :defer t
-  :config
-  (require 'tree-sitter-langs)
-  (global-tree-sitter-mode)
-  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
-
 (setq scroll-margin 7
       scroll-step 1
       scroll-conservatively 10000
@@ -53,8 +45,6 @@
 (when (string= (system-name) "scorpia")
   (add-hook 'after-init-hook #'fancy-battery-mode)
   (setq fancy-battery-show-percentage t))
-
-(setq haskell-stylish-on-save t)
 
 (use-package pdf-view
   :hook (pdf-tools-enabled . pdf-view-midnight-minor-mode)
