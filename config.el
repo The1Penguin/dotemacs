@@ -75,10 +75,4 @@
                                               (set-input-method "Agda"))))
 (add-hook 'evil-insert-state-exit-hook  (lambda () (set-input-method nil)))
 
-(use-package! lsp-bridge
-  :defer t
-  :config
-  (setq lsp-bridge-enable-log nil)
-  (global-lsp-bridge-mode))
-
 (setq company-idle-delay nil)
