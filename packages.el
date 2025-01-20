@@ -20,6 +20,11 @@
            :repo "gleam-lang/gleam-mode"
            :branch "gleam-ts-mode"))
 (package! astro-ts-mode)
+(package! dash)
+(package! lean4-mode
+  :recipe (:host github
+           :repo "leanprover-community/lean4-mode"
+           :files ("*.el" "data" "data/*.json")))
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
