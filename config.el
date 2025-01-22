@@ -76,5 +76,4 @@
 (add-hook 'evil-insert-state-exit-hook  (lambda () (set-input-method nil)))
 
 (setq company-idle-delay nil)
-
-(setq tex-compile-commands ("latexmk -pdf %r"))
+(setq TeX-command-default "laTeXMk")
