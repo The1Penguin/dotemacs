@@ -4,9 +4,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-item-indent 1)
- '(TeX-command-list
-   '(("tectonic" "tectonic -X watch" TeX-run-TeX nil
-      (plain-tex-mode latex-mode doctex-mode context-mode texinfo-mode ams-tex-mode))))
  '(abbrev-file-name "~/.emacs.d/abbrev_defs")
  '(all-the-icons-scale-factor 1.0)
  '(auto-image-file-mode t)
