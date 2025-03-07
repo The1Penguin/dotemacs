@@ -15,10 +15,6 @@
 (package! fancy-battery)
 (package! catppuccin-theme)
 (package! bnfc)
-(package! gleam-ts-mode
-  :recipe (:host github
-           :repo "gleam-lang/gleam-mode"
-           :branch "gleam-ts-mode"))
 (package! astro-ts-mode)
 (package! dash)
 (package! lean4-mode
