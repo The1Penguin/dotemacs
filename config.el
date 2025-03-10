@@ -77,17 +77,3 @@
 (add-hook 'evil-insert-state-exit-hook  (lambda () (set-input-method nil)))
 
 (setq company-idle-delay nil)
-(setq TeX-engine-alist '((default
-                          "Tectonic"
-                          "tectonic -X compile -f plain %T"
-                          "tectonic -X watch"
-                          nil)))
-
-(setq LaTeX-command-style '(("" "%(latex)")))
-(setq TeX-process-asynchronous t
-      TeX-check-TeX nil
-      TeX-engine 'default)
-(let ((tex-list (assoc "TeX" TeX-command-list))
-      (latex-list (assoc "LaTeX" TeX-command-list)))
-  (setf (cadr tex-list) "%(tex)"
-        (cadr latex-list) "%l"))
