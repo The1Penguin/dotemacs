@@ -71,6 +71,7 @@
 (add-hook 'evil-insert-state-entry-hook (lambda ()
                                           (if (not (or (eq major-mode 'lean4-mode)
                                                        (eq major-mode 'latex-mode)
+                                                       (eq major-mode 'LaTeX-mode)
                                                        (eq major-mode 'org-mode)
                                                        (eq major-mode 'vterm-mode)))
                                               (set-input-method "Agda"))))
