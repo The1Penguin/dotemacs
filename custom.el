@@ -17,7 +17,6 @@
  '(display-time-mode t)
  '(doc-view-continuous nil)
  '(doom-modeline-buffer-file-name-style 'relative-from-project)
- '(fancy-splash-image "~/.config/doom/splash.png")
  '(find-file-visit-truename t)
  '(haskell-interactive-popup-errors nil)
  '(haskell-interactive-prompt "λ ")

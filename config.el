@@ -55,7 +55,7 @@
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
 (add-hook! '+doom-dashboard-functions :append)
 (setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil))
-(setq fancy-splash-image "~/.config/doom/splash.png")
+(setq fancy-splash-image "~/.config/doom/splash.svg")
 
 (global-visual-line-mode t)
 
