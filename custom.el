@@ -72,7 +72,8 @@
      (after-save-hook)
      (after-save-hook)
      (doom-first-file-hook)
-     (doom-init-ui-hook))))
+     (doom-init-ui-hook)
+     (lsp-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
