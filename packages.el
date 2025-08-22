@@ -9,7 +9,7 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
                                         ;(package! some-package)
 (package! evil-snipe)
-(package! insert-kaomoji)
+;; (package! insert-kaomoji)
 (package! svelte-mode)
 (package! hcl-mode)
 (package! fancy-battery)
