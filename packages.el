@@ -21,6 +21,14 @@
   :recipe (:host github
            :repo "leanprover-community/lean4-mode"
            :files ("*.el" "data" "data/*.json")))
+(package! quint-mode
+  :recipe (:host github
+           :repo "informalsystems/quint"
+           :files ("editor-plugins/emacs/quint-mode.el")))
+(package! lsp-quint
+  :recipe (:host github
+           :repo "informalsystems/quint"
+           :files ("editor-plugins/emacs/lsp-quint.el")))
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:

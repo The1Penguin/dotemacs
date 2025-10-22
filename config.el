@@ -79,3 +79,9 @@
 
 (setq company-idle-delay nil)
 (setq default-frame-alist '((undecorated . t)))
+
+(add-to-list 'auto-mode-alist '("\\.qnt" . quint-mode))
+(require 'lsp-quint)
+(use-package! lsp-quint
+  :hook (quint-mode . lsp)
+  :init (require 'quint-mode))
