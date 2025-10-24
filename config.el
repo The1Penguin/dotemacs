@@ -1,4 +1,8 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+(setq shell-file-name (executable-find "bash"))
+(setq-default vterm-shell "/run/current-system/sw/bin/fish")
+(setq-default explicit-shell-file-name "/run/current-system/sw/bin/fish")
+
 (setq user-full-name "Nor Führ"
       user-mail-address "nor@acorneroftheweb.com")
 
