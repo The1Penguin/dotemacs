@@ -89,3 +89,5 @@
 (use-package! lsp-quint
   :hook (quint-mode . lsp)
   :init (require 'quint-mode))
+
+(set-buffer-multibyte 't)
