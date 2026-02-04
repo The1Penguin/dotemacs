@@ -1,0 +1,3 @@
+#+title: dotemacs
+
+Has moved to my [[https://github.com/The1Penguin/nix_dots][nix dotfiles]]. They can be found more specifically [[under sof][here]].
