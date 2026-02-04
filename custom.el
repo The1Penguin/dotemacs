@@ -61,6 +61,8 @@
  '(pdf-view-midnight-colors '("#4c4f69" . "#eff1f5"))
  '(recentf-filename-handlers '(substring-no-properties doom--recentf-file-truename-fn))
  '(remote-file-name-inhibit-cache 60)
+ '(safe-local-variable-directories
+   '("/home/pingu/dev/appelpaj/" "/home/pingu/.config/doom/" "~/.config/emacs/"))
  '(safe-local-variable-values
    '((eval setq haskell-process-path-ghci "cabal run -- clashi")
      (dante-methods new-build)))
