@@ -17,6 +17,7 @@
 (package! bnfc)
 (package! astro-ts-mode)
 (package! dash)
+(package! tidal)
 (package! lean4-mode
   :recipe (:host github
            :repo "leanprover-community/lean4-mode"
